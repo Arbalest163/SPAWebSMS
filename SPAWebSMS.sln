@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31829.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{1827E4F5-9383-4203-8229-AD605005D8FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{6124082A-5869-4B17-ABBA-1B47C444C585}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{8C14B67A-EA41-4565-AD75-D7B9AB1988F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPAWebSMS.Domain", "Core\SPAWebSMS.Domain\SPAWebSMS.Domain.csproj", "{9D5A81B6-DA61-4DFA-A5E1-58CE2ABA70CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPAWebSMS.Application", "Core\SPAWebSMS.Application\SPAWebSMS.Application.csproj", "{AE83C3EA-5EE4-4C09-ADFE-C1C357A9F14A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9D5A81B6-DA61-4DFA-A5E1-58CE2ABA70CE} = {9D5A81B6-DA61-4DFA-A5E1-58CE2ABA70CE}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPAWebSMS.Persistence", "Infrastructure\SPAWebSMS.Persistence\SPAWebSMS.Persistence.csproj", "{C006B2C6-CD50-4D18-B3E7-BDE26D0E37A1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE83C3EA-5EE4-4C09-ADFE-C1C357A9F14A} = {AE83C3EA-5EE4-4C09-ADFE-C1C357A9F14A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPAWebSMS.WebApi", "Presentation\SPAWebSMS.WebApi\SPAWebSMS.WebApi.csproj", "{C25B470B-7C34-4224-8145-12B2ACE078EE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C006B2C6-CD50-4D18-B3E7-BDE26D0E37A1} = {C006B2C6-CD50-4D18-B3E7-BDE26D0E37A1}
+		{AE83C3EA-5EE4-4C09-ADFE-C1C357A9F14A} = {AE83C3EA-5EE4-4C09-ADFE-C1C357A9F14A}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D5A81B6-DA61-4DFA-A5E1-58CE2ABA70CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D5A81B6-DA61-4DFA-A5E1-58CE2ABA70CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D5A81B6-DA61-4DFA-A5E1-58CE2ABA70CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D5A81B6-DA61-4DFA-A5E1-58CE2ABA70CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE83C3EA-5EE4-4C09-ADFE-C1C357A9F14A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE83C3EA-5EE4-4C09-ADFE-C1C357A9F14A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE83C3EA-5EE4-4C09-ADFE-C1C357A9F14A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE83C3EA-5EE4-4C09-ADFE-C1C357A9F14A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C006B2C6-CD50-4D18-B3E7-BDE26D0E37A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C006B2C6-CD50-4D18-B3E7-BDE26D0E37A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C006B2C6-CD50-4D18-B3E7-BDE26D0E37A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C006B2C6-CD50-4D18-B3E7-BDE26D0E37A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C25B470B-7C34-4224-8145-12B2ACE078EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C25B470B-7C34-4224-8145-12B2ACE078EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C25B470B-7C34-4224-8145-12B2ACE078EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C25B470B-7C34-4224-8145-12B2ACE078EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9D5A81B6-DA61-4DFA-A5E1-58CE2ABA70CE} = {1827E4F5-9383-4203-8229-AD605005D8FF}
+		{AE83C3EA-5EE4-4C09-ADFE-C1C357A9F14A} = {1827E4F5-9383-4203-8229-AD605005D8FF}
+		{C006B2C6-CD50-4D18-B3E7-BDE26D0E37A1} = {6124082A-5869-4B17-ABBA-1B47C444C585}
+		{C25B470B-7C34-4224-8145-12B2ACE078EE} = {8C14B67A-EA41-4565-AD75-D7B9AB1988F7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18A92D46-B700-4DE4-A57E-2178B879A1C1}
+	EndGlobalSection
+EndGlobal
