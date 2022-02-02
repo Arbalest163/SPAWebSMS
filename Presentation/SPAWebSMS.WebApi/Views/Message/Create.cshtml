@@ -1,0 +1,42 @@
+﻿@model MessageViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+<style>
+    .left_block {
+        position: fixed;
+        left: 50px;
+        width: 200px;
+    }
+
+    .right_block {
+        position: relative;
+        left: 200px;
+    }
+
+    .inner_block {
+        position: absolute;
+        left: 300px;
+    }
+</style>
+
+    <div class="left_block">
+            <h2>Отправка сообщения</h2>
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary()
+                <label>Имя отправителя</label>
+                <p>@Html.EditorFor(n => n.SendersName)</p>
+                <label>Номер получателя</label>
+                <p>@Html.EditorFor(n => n.RecipientsNumber)</p>
+                <label>Текст сообщения</label>
+                <p>@Html.TextAreaFor(t => t.TextMessage)</p>
+
+                <button type="submit">Отправить</button>
+            }
+    </div>
+    <div class="right_block">
+        <div class="inner_block">
+            @{await Html.RenderPartialAsync("ViewMessages"); }
+        </div>
+    </div>

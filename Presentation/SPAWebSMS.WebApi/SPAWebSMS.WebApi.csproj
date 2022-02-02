@@ -1,7 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\SPAWebSMS.Application\SPAWebSMS.Application.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\SPAWebSMS.Persistence\SPAWebSMS.Persistence.csproj" />
+  </ItemGroup>
 
 </Project>

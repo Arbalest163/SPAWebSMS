@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "ViewMessages";
+}
+@await Html.PartialAsync("CssPartial")
+<h2>Список отправленных сообщений</h2>
+<ul>
+    @foreach (MessageViewModel item in ListMessages.messageViewModels)
+    {
+        <li>
+            Дата отправки: @item.SendingDate <br />
+            Номер получаетя: @item.RecipientsNumber <br />
+            Текст: @item.TextMessage <br />
+            Статус: @item.StatusMessage
+        </li>
+    }
+</ul>
